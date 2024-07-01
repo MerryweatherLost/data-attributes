@@ -1,0 +1,37 @@
+# Make sure this is set to "kotlinforforge"
+modLoader="kotlinforforge"
+# Make sure this is set to the appropriate version range
+loaderVersion="[4.11,)" # Require at least 4.11.x
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+credits="BareMinimumStudios, CleverNucleus"
+authors="${mod_authors}"
+description='''${mod_description}'''
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="[46,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[modproperties.data_attributes]
+catalogueImageIcon="data_attributes_icon.png"
+
+[mc-publish]
+modrinth = "KCGxOJsE"
+curseforge = 955929
+loaders = ["forge", "neoforge"]
+dependencies=[
+    "kotlinforforge@4.10.0(required){modrinth:ordsPcFz}{curseforge:351264}#(ignore:github)"
+]
